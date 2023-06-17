@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS | Arrow Functions</title>
+</head>
+<body>
+    <div class="container">
+        This is a container
+    </div>
+    <script>
+        let greet = ()=> {
+            console.log('Good morning');
+        }
+
+        // let sum = (a, b)=> {
+        //     return a+b;
+        // }
+
+        let sum = (a, b)=> a+b;
+
+        let ret = sum(9,2);
+        console.log(ret);
+
+        let half = a => a/2;  // for one argument no need bracket
+
+        // function greet(){
+        //     console.log('Good morning');
+        // }
+        greet();
+
+        setTimeout(() => {
+            console.log("We are inside settimeout.")
+        }, 3000);
+
+        let obj1 = {
+            greeting: "Good Morning ",
+            names:["Harry", "Rohan"],
+            speak(){
+                this.names.forEach((student)=>{
+                    console.log(this.greeting + "Kukdoo Koo " + student);
+                })
+            }
+        }
+        obj1.speak();
+    </script>
+</body>
+</html>
